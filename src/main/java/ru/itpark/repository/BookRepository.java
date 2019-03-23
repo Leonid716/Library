@@ -12,6 +12,7 @@ public class BookRepository {
     }
 
     public Book[] getAll() {
+        Book[] books = this.books;
         return books;
     }
 }

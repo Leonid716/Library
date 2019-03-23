@@ -25,20 +25,14 @@ public class BookService {
             if (book == null) {
                 continue;
             }
-            if (author != null) {
-                if (!book.getAuthor().contains(author)) {
-                    continue;
-                }
+            if (author != null && !book.getAuthor().contains(author)) {
+                continue;
             }
-            if (isbn != null) {
-                if (!book.getIsbn().equals(isbn)) {
-                    continue;
-                }
+            if (isbn != null && !book.getIsbn().equals(isbn)) {
+                continue;
             }
-            if (genre != null) {
-                if (!book.getGenre().contains(genre)) {
-                    continue;
-                }
+            if (genre != null && !book.getGenre().contains(genre)) {
+                continue;
             }
 
             if (resultIndex == result.length) {
@@ -51,3 +45,5 @@ public class BookService {
         return result;
     }
 }
+
+
